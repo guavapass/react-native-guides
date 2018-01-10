@@ -9,36 +9,40 @@ Our React Native application is structured as follow:
 ```
 .
 ├── __mocks__                       # Testing mocks
-├── __tests__                       # Top level tets
+├── __tests__                       # Top level tests
 ├── build                           # All build-related code
-├── assets                          # Static public assets (not imported anywhere in source code)
 ├── src                             # Application source code
 │   ├── config                      # Configuration files
-│   │   ├── Settings.js
-│   │   ├── Routes.js
-│   │   └── Colors.js
+│   │   ├── settings.js
+│   │   ├── routes.js
+│   │   └── colors.js
 │   │
-│   ├── shared                      # Shared React components
+│   ├── shared                      # Shared
+│   │  ├── images                   # Shared images
+│   │  ├── components               # Shared React components
+│   │
 │   ├── routes
 │   │   ├── index.js                # Main route definitions and async split points
 │   │   │
-│   │   ├── Home                    # Fractal route
+│   │   ├── Home
 │   │   │   ├── __tests__           # Unit tests
-│   │   │   ├── index.js            # Route definitions and async split points
-│   │   │   ├── components.js       # React components
+│   │   │   ├── images              # Images for the components
+│   │   │   ├── index.js            # Redux container
+│   │   │   ├── Header.js           # React component
+│   │   │   ├── LogoutButton.js     # React component
 │   │   │   ├── actions.js          # Redux action creators
 │   │   │   └── reducers.js         # Redux reducers
 │   │   │
-│   │   └── Lesson                  # Fractal route
+│   │   └── Lesson
 │   │       ├── __tests__           # Unit tests
-│   │       ├── index.js            # Route definitions and async split points
-│   │       ├── components.js       # React components
+│   │       ├── images              # Images for the components
+│   │       ├── index.js            # Redux container
+│   │       ├── Header.js           # React component
 │   │       ├── actions.js          # Redux action creators
 │   │       └── reducers.js         # Redux reducers
 │   │
-│   ├── store                       # Redux-specific pieces
+│   ├── store                       # Redux store
 │   │   ├── createStore.js          # Create and instrument redux store
-│   │   └── reducers.js             # Reducer registry and injection
 │   │
 │   └── libs                        # Libraries
 │       ├── adapters                # Adapters for 3rd Party Modules
