@@ -19,16 +19,25 @@ Our React Native application is structured as follow:
 │   │
 │   ├── shared                      # Shared
 │   │  ├── images                   # Shared images
+│   │  │   ├── activity_icons
+│   │  │       ├── yoga.png
+│   │  │       ├── hiit.png
 │   │  ├── components               # Shared React components
 │   │
 │   ├── routes
-│   │   ├── index.js                # Main route definitions and async split points
-│   │   │
+│   │   ├── index.js                # Route definitions
 │   │   ├── Home
 │   │   │   ├── __tests__           # Unit tests
 │   │   │   ├── images              # Images for the components
-│   │   │   ├── index.js            # Redux container
+│   │   │       ├── header.png
+│   │   │   ├── index.js            # Just import `HomeScreen.js`
+│   │   │   ├── HomeScreen.js       # Redux container + layout
 │   │   │   ├── Header.js           # React component
+│   │   │   ├── Tabs                # Huge component could be break into sub-components with its own directory
+│   │   │       ├── ProfileTab.js   # React component
+│   │   │       ├── NewsTab.js      # React component
+│   │   │       ├── index.js        # React component
+│   │   │   ├── Tabs.js             # React component
 │   │   │   ├── LogoutButton.js     # React component
 │   │   │   ├── actions.js          # Redux action creators
 │   │   │   └── reducers.js         # Redux reducers
@@ -50,8 +59,8 @@ Our React Native application is structured as follow:
 │       ├── modules                 # 3rd Party Native Modules
 │       └── I18n                    # Translations
 │
-├── index.ios.js                    # App entry points
-└── index.android.js                # App entry points
+├── index.ios.js                    # iOS entry point
+└── index.android.js                # Android entry point
 ```
 
 This structure shares a lot of similarities and inspired by [React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit)'s [Fractal Project Structure](https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure).
