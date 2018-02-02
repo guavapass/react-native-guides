@@ -90,7 +90,7 @@ This structure shares a lot of similarities and inspired by [React Redux Starter
     // createStore.js
     //
 
-    export default class createStore {
+    export class createStore {
       ...
     }
     ```
