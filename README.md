@@ -53,7 +53,7 @@ Our React Native application is structured as follow:
 │   ├── actions                     # Actions for global store
 │   │   └── membership.js           # Global actions
 │   │    
-│   ├── store                       # Redux store
+│   ├── stores                      # Redux stores
 │   │   ├── createStore.js          # Create and instrument redux store
 │   │   └── membership.js           # Global store
 │   │
