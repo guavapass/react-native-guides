@@ -50,8 +50,12 @@ Our React Native application is structured as follow:
 │   │       ├── actions.js          # Redux action creators
 │   │       └── reducers.js         # Redux reducers
 │   │
+│   ├── actions                     # Actions for global store
+│   │   └── membership.js           # Global actions
+│   │    
 │   ├── store                       # Redux store
-│   │   └── createStore.js          # Create and instrument redux store
+│   │   ├── createStore.js          # Create and instrument redux store
+│   │   └── membership.js           # Create and instrument redux store
 │   │
 │   └── libs                        # Libraries
 │       ├── adapters                # Adapters for 3rd Party Modules
