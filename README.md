@@ -19,24 +19,24 @@ Our React Native application is structured as follow:
 │   │
 │   ├── shared                      # Shared
 │   │  ├── images                   # Shared images
-│   │  │   ├── activity_icons
-│   │  │       ├── yoga.png
-│   │  │       ├── hiit.png
-│   │  ├── components               # Shared React components
+│   │  │   └── activity_icons
+│   │  │       └── yoga.png
+│   │  │       └── hiit.png
+│   │  └── components               # Shared React components
 │   │
 │   ├── routes
 │   │   ├── index.js                # Route definitions
 │   │   ├── Home
 │   │   │   ├── __tests__           # Unit tests
 │   │   │   ├── images              # Images for the components
-│   │   │       ├── header.png
+│   │   │   │   └── header.png
 │   │   │   ├── index.js            # Just import `HomeScreen.js`
 │   │   │   ├── HomeScreen.js       # Redux container + layout
 │   │   │   ├── Header.js           # React component
-│   │   │   ├── Tabs                # Huge component could be break into sub-components with its own directory
-│   │   │       ├── ProfileTab.js   # React component
-│   │   │       ├── NewsTab.js      # React component
-│   │   │       ├── index.js        # React component
+│   │   │   └── Tabs                # Huge component could be break into sub-components with its own directory
+│   │   │   │    ├── ProfileTab.js   # React component
+│   │   │   │    ├── NewsTab.js      # React component
+│   │   │   │    └── index.js        # React component
 │   │   │   ├── Tabs.js             # React component
 │   │   │   ├── LogoutButton.js     # React component
 │   │   │   ├── actions.js          # Redux action creators
@@ -51,7 +51,7 @@ Our React Native application is structured as follow:
 │   │       └── reducers.js         # Redux reducers
 │   │
 │   ├── store                       # Redux store
-│   │   ├── createStore.js          # Create and instrument redux store
+│   │   └── createStore.js          # Create and instrument redux store
 │   │
 │   └── libs                        # Libraries
 │       ├── adapters                # Adapters for 3rd Party Modules
