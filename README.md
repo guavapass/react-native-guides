@@ -19,24 +19,24 @@ Our React Native application is structured as follow:
 │   │
 │   ├── shared                      # Shared
 │   │  ├── images                   # Shared images
-│   │  │   ├── activity_icons
-│   │  │       ├── yoga.png
-│   │  │       ├── hiit.png
-│   │  ├── components               # Shared React components
+│   │  │   └── activity_icons
+│   │  │       └── yoga.png
+│   │  │       └── hiit.png
+│   │  └── components               # Shared React components
 │   │
 │   ├── routes
 │   │   ├── index.js                # Route definitions
 │   │   ├── Home
 │   │   │   ├── __tests__           # Unit tests
 │   │   │   ├── images              # Images for the components
-│   │   │       ├── header.png
+│   │   │   │   └── header.png
 │   │   │   ├── index.js            # Just import `HomeScreen.js`
 │   │   │   ├── HomeScreen.js       # Redux container + layout
 │   │   │   ├── Header.js           # React component
-│   │   │   ├── Tabs                # Huge component could be break into sub-components with its own directory
-│   │   │       ├── ProfileTab.js   # React component
-│   │   │       ├── NewsTab.js      # React component
-│   │   │       ├── index.js        # React component
+│   │   │   └── Tabs                # Huge component could be break into sub-components with its own directory
+│   │   │   │    ├── ProfileTab.js   # React component
+│   │   │   │    ├── NewsTab.js      # React component
+│   │   │   │    └── index.js        # React component
 │   │   │   ├── Tabs.js             # React component
 │   │   │   ├── LogoutButton.js     # React component
 │   │   │   ├── actions.js          # Redux action creators
@@ -50,8 +50,12 @@ Our React Native application is structured as follow:
 │   │       ├── actions.js          # Redux action creators
 │   │       └── reducers.js         # Redux reducers
 │   │
-│   ├── store                       # Redux store
+│   ├── actions                     # Actions for global store
+│   │   └── membership.js           # Global actions
+│   │    
+│   ├── stores                      # Redux stores
 │   │   ├── createStore.js          # Create and instrument redux store
+│   │   └── membership.js           # Global store
 │   │
 │   └── libs                        # Libraries
 │       ├── adapters                # Adapters for 3rd Party Modules
@@ -86,7 +90,7 @@ This structure shares a lot of similarities and inspired by [React Redux Starter
     // createStore.js
     //
 
-    export default class createStore {
+    export class createStore {
       ...
     }
     ```
