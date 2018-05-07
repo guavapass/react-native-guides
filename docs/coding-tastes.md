@@ -91,3 +91,56 @@ wrapper.simulte('click');
 expect(onClick.mock.calls.length).toEqual(1);
 
 ```
+
+5. Use `on` as prefix for naming handler.
+
+```js
+// WE DO
+
+class Foo extends React.Component {
+  onButtonPress() {
+    ...
+  }
+
+  render() {
+    return <Button onPress={onButtonPress} />
+  }
+}
+
+// WE DON'T
+class Foo extends React.Component {
+  handleButtonPress() {
+    ...
+  }
+
+  render() {
+    return <Button onPress={handleButtonPress} />
+  }
+}
+```
+
+6. Use of de-structuring assignment.
+    * De-structure an object whenever possible, even it has only 1 field.
+    * Don't de-structure `this` inside a class.
+    * Don't de-structure a function's parameter directly.
+
+```js
+// WE DO
+
+const { loading } = this.state;
+const { onPress } = this.props;
+
+function hello(params) {
+  const { name } = params;
+}
+
+// WE DON'T
+
+// Don't de-structure `this` inside a class.
+const { onButtonPress } = this;
+
+// Don't de-structure a function's parameter directly.
+function hello({ name }) {
+}
+
+```
