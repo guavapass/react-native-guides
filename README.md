@@ -102,3 +102,15 @@ This structure shares a lot of similarities and inspired by [React Redux Starter
     Top level directories are fixed, which are single word in **lower case**.
 
     Any directory that contains React components use **upper camel case**.
+
+## Linting
+
+Projects makes use of the following linting configs and plugins as a base:
+
+* [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript)
+* [Eslint Plugin Detox](https://github.com/hammadj/eslint-plugin-detox)
+* [Eslint Plugin Import](https://github.com/benmosher/eslint-plugin-import)
+* [Eslint Plugin Jest](https://github.com/jest-community/eslint-plugin-jest)
+* [Eslint Plugin JSX A11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)
+* [Eslint Plugin React](https://github.com/yannickcr/eslint-plugin-react)
+* [Eslint Plugin React-Native](https://github.com/Intellicode/eslint-plugin-react-native)
